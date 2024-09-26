@@ -29,13 +29,13 @@ bin/
 ### VS Code ###
 .vscode/
 
+
+.idea
 out
-*.bat
 log
+*.log
 target
 .git
 storage
 logs
 build
-gradle
-gradlew
