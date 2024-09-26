@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "45278ecb-f98f-4e44-a405-993be89a36f9",
+		"name": "Stat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38539023"
+	},
+	"item": [
+		{
+			"name": "stat_by_email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "email1@gmail.com",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8080/stat",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"stat"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

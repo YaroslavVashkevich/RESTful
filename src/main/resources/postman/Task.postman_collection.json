@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "15fb7411-2c1a-4a90-9283-2343627c7915",
+		"name": "Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38539023"
+	},
+	"item": [
+		{
+			"name": "tasks-by-email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "email1@gmail.com",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8080/task/all",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Тестовая задача\",\r\n    \"completed\": false,\r\n    \"taskDate\": \"2024-09-25T10:00:00\",\r\n    \"priority\": {\r\n        \"id\": 1\r\n    },\r\n    \"category\": {\r\n        \"id\": 1\r\n    },\r\n    \"user\": {\r\n        \"id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8080/task/add",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 50032,\r\n    \"title\": \"Тестовая задача999\",\r\n    \"completed\": false,\r\n    \"taskDate\": \"2024-09-25T00:00:00\",\r\n    \"priority\": {\r\n        \"id\": 1,\r\n        \"title\": null,\r\n        \"color\": null,\r\n        \"user\": null\r\n    },\r\n    \"category\": {\r\n        \"id\": 1,\r\n        \"title\": null,\r\n        \"completedCount\": null,\r\n        \"uncompletedCount\": null,\r\n        \"user\": null\r\n    },\r\n    \"user\": {\r\n        \"id\": 1,\r\n        \"email\": null,\r\n        \"username\": null,\r\n        \"password\": null\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8080/task/update",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search-task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"о\",\r\n    \"completed\": 0,\r\n    \"priorityId\": 1,\r\n    \"categoryId\": 1,\r\n    \"email\": \"email1@gmail.com\",\r\n    \"dateFrom\": \"2024-09-25\",\r\n    \"dateTo\": \"2024-09-25\",\r\n    \"pageNumber\": 0,\r\n    \"pageSize\": 5,\r\n    \"sortColumn\": \"title\",\r\n    \"sortDirection\": \"desc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8080/task/search",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search-task-by-id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "50033",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8080/task/id",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task",
+						"id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8080/task/delete/50032",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task",
+						"delete",
+						"50032"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
